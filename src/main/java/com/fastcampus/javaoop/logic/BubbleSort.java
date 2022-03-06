@@ -7,8 +7,10 @@ import java.util.List;
 // 문자열, 숫자 정렬
 // 서로비교하기
 // 제네릭 타입을 사용하는데 비교하는 클래스 Comparable (String, Integer)
-public class BubbleSort <T extends Comparable<T>>{
+public class BubbleSort <T extends Comparable<T>> implements Sort<T>{
 
+    // 구현된 메서드다라는 것을 명시하기 위해서 Override를 붙여준다.
+    @Override
     public List<T> sort(List<T> list) {
 
         // 입력한 메모리를 구분 시켜놓음.
